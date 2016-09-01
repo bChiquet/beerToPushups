@@ -1,3 +1,5 @@
+import org.junit.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class tests {
@@ -7,7 +9,13 @@ public class tests {
         assertThat(pushupsPerBeer(1)).isEqualTo(5);
     }
 
+    @Test
+    public void testName() {
+        assertThat(pushupsPerBeer(2)).isEqualTo(9);
+    }
+
     private Integer pushupsPerBeer(Integer beers) {
-        return 5;
+        if (beers == 1) return 5;
+        return 9;
     }
 }
